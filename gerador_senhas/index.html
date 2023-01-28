@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #check, #resultado{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mensagem {
+            position: absolute;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            transition: 0.5s all linear;
+            top: -100%;
+            left: 45%;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .hidden {
+            top: 0;
+        }
+
+        #answer {
+            height: fit-content;
+            border: 1px solid;
+            padding: 10px;
+            letter-spacing: 2px;
+        }
+    </style>
+
+</head>
+<body>
+    <p class="mensagem"></p>
+    <header>
+        <h1>Gerador de Senhas</h1>
+    </header>
+    <main>
+        <div id='campo'>
+            <label for='pswLeght'>Digite o tamanho da senha:</label><br>
+            <input id='pswLeght' type='text' min='1'><br>
+            
+            <label for='pswQtd'>Digite a quantidade de senhas:</label><br>
+            <input id='pswQtd' type='text' min='1'><br>
+        </div>
+
+        <div id='check'>
+            <label><input id='special' type='checkbox'> Incluir caracteres especiais</label>
+            
+            <label><input id='number' type='checkbox'> Incluir números</label>
+            
+            <label><input id='upperCase' type='checkbox'> Incluir letras maiúsculas</label>
+        </div>
+
+        <button class="gerar">Gerar senha</button>
+        <button class="butt">Limpar senhas</button>
+
+        <div id='resultado'>
+            <label for="answer">Resultado:</label>
+            <div id='answer'></div>
+        </div>
+
+        
+    </main>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
