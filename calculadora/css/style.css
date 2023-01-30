@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body{
+    height: 100vh;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    cursor: pointer;
+  }
+  
+  #calculadora{
+    background-color: black;
+    width: 414px;
+    height: 60vh;
+  
+  }
+  #display{
+    height: 15vh;
+    font-size: 30px;
+  }
+  #formula, #resultado{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  #mais{
+    grid-area: mais;
+  }
+  #menos{
+    grid-area: menos;
+  }
+  #div{
+    grid-area: div;
+  }
+  #mult{
+    grid-area: mult;
+  }
+  #nove{
+    grid-area: nove;
+  }
+  #oito{
+    grid-area: oito;
+  }
+  #sete{
+    grid-area: sete;
+  }
+  #seis{
+    grid-area: seis;
+  }
+  #cinco{
+    grid-area: cinco;
+  }
+  #quatro{
+    grid-area: quatro;
+  }
+  #tres{
+    grid-area: tres;
+  }
+  #dois{
+    grid-area: dois;
+  }
+  #um{
+    grid-area: um;
+  }
+  #zero{
+    grid-area: zer;
+  }
+  #vir{
+    grid-area: vir;
+  }
+  #igual{
+    grid-area: igual;
+  }
+  #del{
+    grid-area: del;
+  }
+  
+  
+  #botoes{
+    height: 45vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1%;
+    row-gap: 1%;
+    grid-template-areas: 
+      "mais menos div mult"
+      "sete oito nove del"
+      "quatro cinco seis del"
+      "um dois tres igual"
+      "zer zer vir igual";
+  }
+  input{
+    color: black;
+    font-size: 30px;
+}
