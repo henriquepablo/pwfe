@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+    <button>+</button>
+    
+    <script>
+    //    const t = document.querySelector('button').addEventListener('click', () => {
+    //         const input = document.createElement('input');
+
+    //         document.body.insertBefore(input, document.querySelector('button'));
+            
+    //         verificar(input);
+    //     });
+
+        const t = document.querySelector('button');
+
+        t.addEventListener('click', () => {
+            const input = document.createElement('input');
+
+            document.body.insertBefore(input, t);
+
+            if(verificar(input)) document.querySelector('button').remove();
+
+        });
+
+        const verificar = (input) => {
+            let inputQ = document.querySelectorAll('input');
+            
+            console.log(inputQ.length);
+
+            if(inputQ.length === 6) return true;
+            
+            return false;
+        }
+
+    </script>
+</body>
+</html>
